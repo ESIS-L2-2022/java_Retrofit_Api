@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
                     if (user == null){
                         Toast.makeText(MainActivity.this, "L'utilisateur n'a pas été trouvé", Toast.LENGTH_LONG).show();
                     }
-                    tvName.setText("Name" + user.getName());
-                    tvLogin.setText("Login" + user.getLogin());
+                    tvName.setText("Name : " + user.getName());
+                    tvLogin.setText("Login : " + user.getLogin());
                     tvId.setText("Id : " + user.getId());
 
                 } else {
