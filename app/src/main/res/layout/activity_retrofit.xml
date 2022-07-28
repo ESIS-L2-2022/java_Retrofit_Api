@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product :"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvInit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Init :"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvTransparency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transparency :"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature :"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvDirection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Direction :"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speed :"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etLongitude"
+            android:layout_marginTop="20dp"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"/>
+
+        <EditText
+            android:id="@+id/etLatitude"
+            android:layout_marginTop="20dp"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Latitude"/>
+
+        <EditText
+            android:id="@+id/etAcceleration"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Acceleration"/>
+
+        <EditText
+            android:id="@+id/etUnit"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unit"/>
+
+        <EditText
+            android:id="@+id/etOutput"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Output"/>
+
+        <EditText
+            android:id="@+id/etTzshift"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time zone shift"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soumettre"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>
