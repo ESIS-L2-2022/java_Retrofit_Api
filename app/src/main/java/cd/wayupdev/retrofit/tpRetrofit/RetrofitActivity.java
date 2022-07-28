@@ -110,8 +110,8 @@ public class RetrofitActivity extends AppCompatActivity {
                     for (Dataseries data: meteo.getDataseries()) {
                         tvTransparency.setText("Transparency : " + data.getTransparency());
                         tvTemperature.setText("Temperature : " + data.getTemp2m());
-                        //tvDirection.setText("Direction : " + data.getWind().getDirection());
-                        //tvSpeed.setText("Direction : " + data.getWind().getSpeed());
+                        tvDirection.setText("Direction : " + data.getWind().getDirection());
+                        tvSpeed.setText("Direction : " + data.getWind().getSpeed());
                     }
 
                 } else {
