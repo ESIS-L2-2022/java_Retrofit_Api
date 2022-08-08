@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Retrofit"
         tools:targetApi="31">
         <activity
-            android:name=".tpRetrofit.RetrofitActivity"
+            android:name=".roomDB.RoomDBActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,13 +25,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".tpRetrofit.RetrofitActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
     </application>
 
