@@ -18,9 +18,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cd.wayupdev.retrofit.R;
-import cd.wayupdev.retrofit.roomDB.DB.AppDataBase;
-import cd.wayupdev.retrofit.roomDB.DB.User;
-import cd.wayupdev.retrofit.roomDB.DB.UserDao;
+import cd.wayupdev.retrofit.roomDB.dao.EtudiantDao;
+import cd.wayupdev.retrofit.roomDB.dao.PromotionDao;
+import cd.wayupdev.retrofit.roomDB.entity.Etudiant;
+import cd.wayupdev.retrofit.roomDB.entity.EtudiantPromotion;
+import cd.wayupdev.retrofit.roomDB.entity.Promotion;
+import cd.wayupdev.retrofit.roomDB.entity.User;
+import cd.wayupdev.retrofit.roomDB.dao.UserDao;
 
 public class RoomDBActivity extends AppCompatActivity {
 
@@ -72,25 +76,38 @@ public class RoomDBActivity extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build();
 
-        UserDao dao = db.userDao();
+        /*UserDao dao = db.userDao();
         dao.insert(user);
-
 
         List<User> user1 = dao.findAll();
 
         List<String> josh = new ArrayList<>();
         StringBuilder sr = new StringBuilder();
-        //user1.forEach(it -> josh.add(it.matricule));
+        user1.forEach(it -> josh.add(it.matricule));
 
         user1.forEach(it -> sr.append("\n" + it.matricule));
         mat.setText(sr);
 
-        readData(josh);
+        readData(josh);*/
+
+        PromotionDao promotionDao = db.promotionDao();
+        EtudiantDao etudiantDao = db.etudiantDao();
+
+        Promotion promotion = new Promotion(2, "L3 Si");
+        promotionDao.insert(promotion);
+
+        Etudiant etudiant = new Etudiant(2,"josue", "Muleshi", "M456", 2);
+        etudiantDao.insert(etudiant);
+
+        List<EtudiantPromotion> etud = promotionDao.findPromotionAndEtudiant();
+        StringBuilder sr = new StringBuilder();
+
+        etud.forEach(it -> sr.append("\n" + it.etudiant.nom + " " + it.promotion.nom));
+        mat.setText(sr);
     }
 
     private void readData(List<String> mat){
-
-        ArrayAdapter adapter = new ArrayAdapter(this,
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 R.layout.activity_listview, mat);
 
         ListView listView = findViewById(R.id.mobile_list);

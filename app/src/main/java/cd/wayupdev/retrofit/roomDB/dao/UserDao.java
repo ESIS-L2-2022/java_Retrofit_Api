@@ -1,4 +1,4 @@
-package cd.wayupdev.retrofit.roomDB.DB;
+package cd.wayupdev.retrofit.roomDB.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -8,6 +8,8 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
+
+import cd.wayupdev.retrofit.roomDB.entity.User;
 
 @Dao
 public interface UserDao {
